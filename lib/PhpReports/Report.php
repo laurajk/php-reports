@@ -206,7 +206,10 @@ class Report {
 		//try to infer report type from file extension
 		if(!isset($this->options['Type'])) {
 			$file_type = array_pop(explode('.',$this->report));
-			
+//Laura
+//echo "<br>file type<br>";
+//echo $file_type."<br><br>";
+
 			if(!isset(PhpReports::$config['default_file_extension_mapping'][$file_type])) {
 				throw new Exception("Unknown report type - ".$this->report);
 			}
@@ -218,6 +221,7 @@ class Report {
 		if(!isset($this->options['Database'])) $this->options['Database'] = strtolower($this->options['Type']);
 		
 		if(!isset($this->options['Name'])) $this->options['Name'] = $this->report;
+
 	}
 	
 	public function parseHeader($name,$value,$dataset=null) {
@@ -299,14 +303,35 @@ class Report {
 		if(isset($environments[$this->options['Environment']]['host'])) {
 			$this->macros['host'] = $environments[$this->options['Environment']]['host'];
 		}
-		
-		$classname = $this->options['Type'].'ReportType';
-		
+
+		// modifica Laura
+		if($this->options['Type']="Pdo_pgsql"){
+			$classname = 'PdoReportType';
+			$classname::init($this, "Pdo_pgsql");
+		}else{
+			$classname = $this->options['Type'].'ReportType';
+
+			if(!class_exists($classname)) {
+				throw new exception("Unknown report type '".$this->options['Type']."'");
+			}
+			$classname::init($this);
+		}
+
+		// originale
+		/*$classname = $this->options['Type'].'ReportType';
+
 		if(!class_exists($classname)) {
 			throw new exception("Unknown report type '".$this->options['Type']."'");
 		}
+		$classname::init($this);*/
 		
-		$classname::init($this);
+//Laura
+/*echo "classname 2 - tipo di connettore scelto<br>";
+echo $this->options['Type'];	
+echo "<br><br>";*/
+		
+
+		
 	}
 	
 	public function getRaw() {
@@ -387,9 +412,43 @@ class Report {
 		//release the write lock on the session file
 		//so the session isn't locked while the report is running
 		session_write_close();
-		
+//echo "<br>type Laura: ";
+//echo $this->options['Type'];		
 		$classname = $this->options['Type'].'ReportType';
+//Laura
+//echo "<br>classname<br>: ".$classname."<\br>";
+
+// modifica Laura
+		if($this->options['Type']="Pdo_pgsql"){
+			$classname = 'PdoReportType';
+			$classname::init($this, "Pdo_pgsql");
+			foreach($this->headers as $header) {
+			$headerclass = $header.'Header';
+			$headerclass::beforeRun($this);
+
+			$classname::openConnection($this, "pgsql");
+			$datasets = $classname::run($this, "pgsql");		
+			$classname::closeConnection($this, "pgsql");
+		}
+		}else{
+			$classname = $this->options['Type'].'ReportType';
+
+			if(!class_exists($classname)) {
+				throw new exception("Unknown report type '".$this->options['Type']."'");
+			}
+			foreach($this->headers as $header) {
+				$headerclass = $header.'Header';
+				$headerclass::beforeRun($this);
+			}
 		
+			$classname::openConnection($this);
+			$datasets = $classname::run($this);		
+			$classname::closeConnection($this);
+		}
+/* Fine modifica laura */
+
+		/* originale*/	
+		/*$classname = $this->options['Type'].'ReportType';
 		if(!class_exists($classname)) {
 			throw new exception("Unknown report type '".$this->options['Type']."'");
 		}
@@ -401,7 +460,7 @@ class Report {
 		
 		$classname::openConnection($this);
 		$datasets = $classname::run($this);		
-		$classname::closeConnection($this);
+		$classname::closeConnection($this);*/
 		
 		// Convert old single dataset format to multi-dataset format
 		if(!isset($datasets[0]['rows']) || !is_array($datasets[0]['rows'])) {

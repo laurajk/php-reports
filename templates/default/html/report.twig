@@ -74,18 +74,21 @@
                 {% if config.report_formats|length > 1 %}
                     {% if DataSets|length > 1 %}All Report Tables:{% endif %}
                     <div class="btn-group">
-                        <button type="button" class="btn btn-primary btn-sm dropdown-toggle" data-toggle="dropdown">
+                        <button type="button" name="btnDownload" class="btn btn-primary btn-sm dropdown-toggle" data-toggle="dropdown">
                             <i class='icon-download'></i> Download/show as <span class="caret"></span>
                         </button>
                         <ul class="dropdown-menu" role="menu">
                         {% for format in config.report_formats|keys %}
                             {% if config.report_formats[format] == 'divider' %}
-                            <li class="divider"></li>
+                            <li class="divider"></li>                
                             {% elseif DataSets|length <= 1 or format != 'csv' %}
-                                <li><a href='{{base}}/report/{{format}}/?{% if DataSets|length > 1 %}datasets=all&{% endif %}{{report_querystring}}' class='report_link'>{{config.report_formats[format]}}</a></li>
+                                <!--<li><a href='{{base}}/report/{{format}}/?{% if DataSets|length > 1 %}datasets=all&{% endif %}{{report_querystring}}' class='report_link'>{{config.report_formats[format]}}</a></li>  -->     
+                                <li><a class='report_link' id='{{format}}'>{{config.report_formats[format]}}</a></li>                    
+                            
                             {% endif %}
                         {% endfor %}
                         </ul>
+                        
                     </div>
                 {% else %}
                     <a href='{{base}}/report/{{config.report_formats|keys[0]}}/?{{report_querystring}}' class='report_link btn'>
@@ -136,6 +139,11 @@
                         </div>
                     </div>
                     <script>
+                        $(function() {
+                            $('#google').on('click', function() {
+console.log("google btn");
+                            }
+
                         $(function() {
                             $('#sendReport').on('click', function() {
                                 var button = $(this);

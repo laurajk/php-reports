@@ -1,4 +1,7 @@
 <?php
+ini_set('display_errors', 'On');
+error_reporting(E_ALL);
+
 // for build-in php server serve the requested resource as-is.
 if (php_sapi_name() == 'cli-server' && preg_match('/\.(?:png|jpg|jpeg|gif|css|js)$/', $_SERVER["REQUEST_URI"])) {
     return false;
@@ -8,6 +11,8 @@ session_start();
 
 //set php ini so the page doesn't time out for long requests
 ini_set('max_execution_time', 300);
+//Laura - Maximum amount of memory a script may consume
+//ini_set('memory_limit', '524M');
 
 //sets up autoloading of composer dependencies
 include 'vendor/autoload.php';

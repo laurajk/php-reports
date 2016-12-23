@@ -2,7 +2,9 @@
 class PdoReportType extends ReportTypeBase {
 	public static $default_driver = null;
 
-	public static function init(&$report) {
+	public static function init(&$report, $Pdo_pgsql=null) {
+
+
 		$environments = PhpReports::$config['environments'];
 
 		if(!isset($environments[$report->options['Environment']][$report->options['Database']])) {
@@ -57,10 +59,22 @@ class PdoReportType extends ReportTypeBase {
 
 
 		$environments = PhpReports::$config['environments'];
+//Laura	
+/*echo "DB scelto";
+echo $report->options['Database'];
+if ($report->options['Database']=='pdo_pgsql')
+	echo "pgsql";
+else
+	echo "mysql";
+*/
+
+
 		$config = $environments[$report->options['Environment']][$report->options['Database']];
+
 
 		if(isset($config['dsn'])) {
 			$dsn = $config['dsn'];
+
 		}
 		else {
 			$host = $config['host'];
@@ -91,6 +105,10 @@ class PdoReportType extends ReportTypeBase {
 			if(isset($config['pass_rw'])) $password = $config['pass_rw'];
 		}
 
+//Laura
+/*echo "<br> config Laura DB: <br>";
+var_dump($config);
+*/
 		$report->conn = new PDO($dsn,$username,$password);
 
 		$report->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);

@@ -19,8 +19,7 @@ class ReportValue {
 		$this->original_value = $value;
 		$this->filtered_value = is_string($value)? strip_tags($value) : $value;
 		$this->html_value = $value;
-		$this->chart_value = $value;
-		
+		$this->chart_value = $value;		
 		$this->is_html = false;
 		$this->class = '';
 		

@@ -1,0 +1,8 @@
+-- Recupera informazioni dal database di cartografia
+-- questo è un report che ...
+-- INFO: { type: "Pdo_pgsql"}
+
+
+SELECT * 
+FROM reti.vw_collegamenti
+limit 10;

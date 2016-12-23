@@ -179,6 +179,9 @@ class VariableHeader extends HeaderBase {
 	
 	public static function afterParse(&$report) {
 		$classname = $report->options['Type'].'ReportType';
+
+//Laura
+//echo "<br>classname 1: ".$classname;
 		
 		foreach($report->options['Variables'] as $var=>$params) {
 			//if it's a select variable and the options are pulled from a database

@@ -1,0 +1,22 @@
+-- Retrieve all users
+-- This is a drilldown report that lists all orders for a given customer
+-- VARIABLE: { 
+--		name: "sesso",
+--		display: "sesso",
+--		type: "select",
+--      options: ["F","M"],
+--		description: "indicare il sesso della persona da ricercare, M=Maschio F=Femmina"
+--	}
+-- INFO: { type: "Pdo_pgsql"}
+
+
+SELECT
+	id as "user id",
+	nome as "nome",
+	cognome as "cognome",
+	sesso as "sesso"
+FROM
+  utenti
+WHERE
+	sesso='{{ sesso }}'
+

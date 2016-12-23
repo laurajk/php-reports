@@ -1,0 +1,49 @@
+"2016-12-23 16:31:01",INFO,--,"The processor starts here.",16,/var/www/html/php-reports/googlesheet_script.php
+"2016-12-23 16:31:01",DEBUG,--,"connessione al DB - DB_HOST:10.254.4.247 DB_USER: postgres DB_NAME: geodb5 DB_TYPE: pgsql",21,/var/www/html/php-reports/googlesheet_script.php
+"2016-12-23 16:36:02",INFO,--,"The processor starts here.",16,/var/www/html/php-reports/googlesheet_script.php
+"2016-12-23 16:36:02",INFO,DB,"connessione al DB - DB_HOST:10.254.4.247 DB_USER: postgres DB_NAME: geodb5 DB_TYPE: pgsql",21,/var/www/html/php-reports/googlesheet_script.php
+"2016-12-23 16:36:02",INFO,INFO,"numero di record recuperati dal DB: 10",30,/var/www/html/php-reports/googlesheet_script.php
+"2016-12-23 16:36:02",INFO,INFO,"inizio autenticazione alle API Spreadsheets v 4.0 di Google",38,/var/www/html/php-reports/googlesheet_script.php
+"2016-12-23 16:36:56",INFO,--,"The processor starts here.",16,/var/www/html/php-reports/googlesheet_script.php
+"2016-12-23 16:36:56",INFO,DB,"connessione al DB - DB_HOST:10.254.4.247 DB_USER: postgres DB_NAME: geodb5 DB_TYPE: pgsql",21,/var/www/html/php-reports/googlesheet_script.php
+"2016-12-23 16:36:56",INFO,INFO,"numero di record recuperati dal DB: 10",30,/var/www/html/php-reports/googlesheet_script.php
+"2016-12-23 16:36:56",INFO,INFO,"inizio autenticazione alle API Spreadsheets v 4.0 di Google",38,/var/www/html/php-reports/googlesheet_script.php
+"2016-12-23 16:38:28",INFO,--,"The processor starts here.",16,/var/www/html/php-reports/googlesheet_script.php
+"2016-12-23 16:38:28",INFO,DB,"connessione al DB - DB_HOST:10.254.4.247 DB_USER: postgres DB_NAME: geodb5 DB_TYPE: pgsql",21,/var/www/html/php-reports/googlesheet_script.php
+"2016-12-23 16:38:28",INFO,INFO,"numero di record recuperati dal DB: 10",30,/var/www/html/php-reports/googlesheet_script.php
+"2016-12-23 16:38:28",INFO,INFO,"inizio autenticazione alle API Spreadsheets v 4.0 di Google",38,/var/www/html/php-reports/googlesheet_script.php
+"2016-12-23 16:41:35",INFO,--,"The processor starts here.",16,/var/www/html/php-reports/googlesheet_script.php
+"2016-12-23 16:41:35",INFO,DB,"connessione al DB - DB_HOST:10.254.4.247 DB_USER: postgres DB_NAME: geodb5 DB_TYPE: pgsql",21,/var/www/html/php-reports/googlesheet_script.php
+"2016-12-23 16:41:35",INFO,INFO,"numero di record recuperati dal DB: 10",30,/var/www/html/php-reports/googlesheet_script.php
+"2016-12-23 16:41:35",INFO,INFO,"inizio autenticazione alle API Spreadsheets v 4.0 di Google",38,/var/www/html/php-reports/googlesheet_script.php
+"2016-12-23 16:41:36",INFO,INFO,"token di autenticazione ottenuto: ya29.Elu9Az7RtUu_9r38u1vCTR7WYALj1TstvKVMqbgn0szsJmMfyfYhRNEKaafYLknZs4LmmUL30PKcnWt5eTUOxQIrlc5MH1LIhv1nyCYKYFWQygF2vOA_vQTUlmbS",48,/var/www/html/php-reports/googlesheet_script.php
+"2016-12-23 16:41:36",INFO,INFO,"inizio scrittura sul foglio Google",51,/var/www/html/php-reports/googlesheet_script.php
+"2016-12-23 16:41:36",INFO,INFO,"GOOGLE_SPREADSHEET_ID: 1tyfkZsZNMEVl3ejZeN1P49PzMM3iA-EmUFDQtJ-eMMMGOOGLE_GID: 2134174337",52,/var/www/html/php-reports/googlesheet_script.php
+"2016-12-23 16:41:38",INFO,INFO,"response operazione di update",93,/var/www/html/php-reports/googlesheet_script.php
+"2016-12-23 16:42:41",INFO,--,"The processor starts here.",16,/var/www/html/php-reports/googlesheet_script.php
+"2016-12-23 16:42:42",INFO,DB,"connessione al DB - DB_HOST:10.254.4.247 DB_USER: postgres DB_NAME: geodb5 DB_TYPE: pgsql",21,/var/www/html/php-reports/googlesheet_script.php
+"2016-12-23 16:42:42",INFO,INFO,"numero di record recuperati dal DB: 10",30,/var/www/html/php-reports/googlesheet_script.php
+"2016-12-23 16:42:42",INFO,INFO,"inizio autenticazione alle API Spreadsheets v 4.0 di Google",38,/var/www/html/php-reports/googlesheet_script.php
+"2016-12-23 16:42:42",INFO,INFO,"token di autenticazione ottenuto: ya29.Elu9A2wjfDOjgHH2Juj5R_Z32G-uctK_p3u4DOgjZnR7Hoc0A66PbMnuyDcFWRfH0jUfVfkFcxFZ8mtopH-2e8Lsqi0IMw_DaT0BtZCcvFe-AdfKT0L-f7j7-GGi",48,/var/www/html/php-reports/googlesheet_script.php
+"2016-12-23 16:42:42",INFO,INFO,"inizio scrittura sul foglio Google",51,/var/www/html/php-reports/googlesheet_script.php
+"2016-12-23 16:42:42",INFO,INFO,"GOOGLE_SPREADSHEET_ID: 1tyfkZsZNMEVl3ejZeN1P49PzMM3iA-EmUFDQtJ-eMMMGOOGLE_GID: 2134174337",52,/var/www/html/php-reports/googlesheet_script.php
+"2016-12-23 16:42:44",INFO,INFO,"response operazione di update",93,/var/www/html/php-reports/googlesheet_script.php
+"2016-12-23 16:42:44",INFO,INFO,,94,/var/www/html/php-reports/googlesheet_script.php
+"2016-12-23 16:45:16",INFO,--,"The processor starts here.",16,/var/www/html/php-reports/googlesheet_script.php
+"2016-12-23 16:45:16",INFO,DB,"connessione al DB - DB_HOST:10.254.4.247 DB_USER: postgres DB_NAME: geodb5 DB_TYPE: pgsql",21,/var/www/html/php-reports/googlesheet_script.php
+"2016-12-23 16:45:16",INFO,INFO,"numero di record recuperati dal DB: 10",30,/var/www/html/php-reports/googlesheet_script.php
+"2016-12-23 16:45:16",INFO,INFO,"inizio autenticazione alle API Spreadsheets v 4.0 di Google",38,/var/www/html/php-reports/googlesheet_script.php
+"2016-12-23 16:45:17",INFO,INFO,"token di autenticazione ottenuto: ya29.Elu9A1YWasqDqNIPcBmzo0whpCVmox-porWYecAEdwkJkh7xyWmvi0Xe1efr5HLpWxypQiAJqEC5LD4dGJy8zN7QYvObECSmhDVoEQelODQGFzE53uuSrty9Rog3",48,/var/www/html/php-reports/googlesheet_script.php
+"2016-12-23 16:45:17",INFO,INFO,"inizio scrittura sul foglio Google",51,/var/www/html/php-reports/googlesheet_script.php
+"2016-12-23 16:45:17",INFO,INFO,"GOOGLE_SPREADSHEET_ID: 1tyfkZsZNMEVl3ejZeN1P49PzMM3iA-EmUFDQtJ-eMMMGOOGLE_GID: 2134174337",52,/var/www/html/php-reports/googlesheet_script.php
+"2016-12-23 16:45:19",INFO,INFO,"response operazione di update",93,/var/www/html/php-reports/googlesheet_script.php
+"2016-12-23 16:45:19",INFO,INFO,,95,/var/www/html/php-reports/googlesheet_script.php
+"2016-12-23 16:47:06",INFO,--,"The processor starts here.",16,/var/www/html/php-reports/googlesheet_script.php
+"2016-12-23 16:47:06",INFO,DB,"connessione al DB - DB_HOST:10.254.4.247 DB_USER: postgres DB_NAME: geodb5 DB_TYPE: pgsql",21,/var/www/html/php-reports/googlesheet_script.php
+"2016-12-23 16:47:06",INFO,INFO,"numero di record recuperati dal DB: 10",30,/var/www/html/php-reports/googlesheet_script.php
+"2016-12-23 16:47:06",INFO,INFO,"inizio autenticazione alle API Spreadsheets v 4.0 di Google",38,/var/www/html/php-reports/googlesheet_script.php
+"2016-12-23 16:47:07",INFO,INFO,"token di autenticazione ottenuto: ya29.Elu9A1Aui27uBqGJxhNtUy8N3ucXtGePtCmHO7oAtK4sVgXHcSjf3L9mkQKX2psv-xiUoPo602IhwphgGlW-_3aK6jXglVZIgxeqmfUDjGfPDJlBTsGyYCXyrV22",48,/var/www/html/php-reports/googlesheet_script.php
+"2016-12-23 16:47:07",INFO,INFO,"inizio scrittura sul foglio Google",51,/var/www/html/php-reports/googlesheet_script.php
+"2016-12-23 16:47:07",INFO,INFO,"GOOGLE_SPREADSHEET_ID: 1tyfkZsZNMEVl3ejZeN1P49PzMM3iA-EmUFDQtJ-eMMMGOOGLE_GID: 2134174337",52,/var/www/html/php-reports/googlesheet_script.php
+"2016-12-23 16:47:09",INFO,INFO,"response operazione di update",94,/var/www/html/php-reports/googlesheet_script.php
+"2016-12-23 16:47:09",INFO,INFO,"operazione di update avvenuta con successo!!!",95,/var/www/html/php-reports/googlesheet_script.php
